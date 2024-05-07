@@ -18,6 +18,7 @@ const meta = {
 export default meta;
 
 
+/** Templates con ajustes prefijados. */
 type Story = StoryObj<typeof meta>
 
 export const Basic: Story = {
@@ -44,5 +45,14 @@ export const CustomColor: Story = {
     args: {
         label: 'Custom Color label',
         fontColor: '#aeafea'
+    }
+};
+
+export const CustomBackgorundColor: Story = {
+    args: {
+        label: 'Custom Color label',
+        size: 'h1',
+        fontColor: '#eee',
+        backgroundColor: '#000',
     }
 };

@@ -12,12 +12,22 @@ interface Props {
     color?: 'text-primary' | 'text-secondary' | 'text-tertiary',
     /** Font color. */
     fontColor?:string,
+    /** Font color. */
+    backgroundColor?:string,
 }
 
-export const Mylabel = ({label, size='normal', allCaps=false, color='text-primary', fontColor}:Props)=>{
+export const Mylabel = ({label, size='normal', allCaps=false, color='text-primary', fontColor, backgroundColor='transparent'}:Props)=>{
     return (
         <>
-            <span className={`${size} ${color}`} style={{color:fontColor, textTransform: (allCaps ? 'uppercase' : 'none')}}>{label}</span>
+            <span className={`${size} ${color}`} 
+                style={{
+                    color:fontColor, 
+                    textTransform: (allCaps ? 'uppercase' : 'none'),
+                    backgroundColor,
+                }}
+            >
+                {label}
+            </span>
         </>
     )
 }
