@@ -1,5 +1,7 @@
 # Componentes creados en el curso de React Pro
 
+Componentes de prueba para el curso.
+
 
 ## Instalación
 
