@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Mylabel, type Props } from "../components/Mylabel";
+import { MyLabel, type Props } from "../components/MyLabel";
 
 
 const meta:Meta<Props> = {
     title: 'UI/labels/MyLabel',
-    component: Mylabel,
+    component: MyLabel,
     tags: ['autodocs'],
     parameters: {
         layout: 'centered'
@@ -13,7 +13,7 @@ const meta:Meta<Props> = {
         size: {control: 'select'},
         fontColor: {control: 'color'},
     }
-} satisfies Meta<typeof Mylabel>;
+} satisfies Meta<typeof MyLabel>;
 
 export default meta;
 

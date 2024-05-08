@@ -16,7 +16,7 @@ export interface Props {
     backgroundColor?:string,
 }
 
-export const Mylabel = ({label, size='normal', allCaps=false, color='text-primary', fontColor, backgroundColor='transparent'}:Props)=>{
+export const MyLabel = ({label, size='normal', allCaps=false, color='text-primary', fontColor, backgroundColor='transparent'}:Props)=>{
     return (
         <>
             <span className={`${size} ${color}`} 

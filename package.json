@@ -1,6 +1,6 @@
 {
   "name": "jdanign-custom-components",
-  "version": "0.0.1",
+  "version": "0.0.1-rc4",
   "type": "module",
   "keywords": [
     "react",
@@ -13,6 +13,8 @@
     "url": "https://github.com/jdanign/sb-components",
     "type": "git"
   },
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "files": [
     "dist/"
   ],
@@ -22,15 +24,16 @@
     ]
   },
   "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^17.0.0 || ^18.2.0",
+    "react-dom": "^17.0.0 || ^18.2.0"
   },
   "scripts": {
     "dev": "vite",
     "start": "vite",
-    "build": "tsc",
+    "build": "npm run clean && tsc && npm run copyfiles",
     "build-all": "tsc && vite build",
     "clean": "rimraf dist/",
+    "copyfiles": "copyfiles -u 1 src/**/*.css dist/",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
@@ -47,12 +50,14 @@
     "@storybook/react": "^8.0.10",
     "@storybook/react-vite": "^8.0.10",
     "@storybook/test": "^8.0.10",
+    "@types/copyfiles": "^2",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "chromatic": "^11.3.0",
+    "copyfiles": "^2.4.1",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
